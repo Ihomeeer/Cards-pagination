@@ -40,6 +40,7 @@ function App() {
             <Card
               isDetailsWindow={true}
               data={currentCard}
+              setCurrent={setCardHandler}
             />
           }
         </Route>
