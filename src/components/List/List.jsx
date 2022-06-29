@@ -5,6 +5,7 @@ import { v4 as generateUid } from 'uuid';
 
 
 export const List = ({ data, setCurrentCard }) => {
+
   return (
     <section className="list__section">
       <ul className="list__items-list">

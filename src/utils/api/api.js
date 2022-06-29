@@ -22,6 +22,17 @@ class Api {
     })
       .then((res) => this._checkStatus(res))
   }
+
+  //получение информации о карточках с сервера постранично
+  getPageWithCards(start, limit) {
+    return fetch(`${this._baseUrl}/posts?_start=${start}&_limit=${limit}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then((res) => this._checkStatus(res))
+  }
 };
 
 const api = new Api("https://jsonplaceholder.typicode.com");
