@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Card } from "../Card/Card";
 import api from "../../utils/api/api";
 import { v4 as generateUid } from 'uuid';
