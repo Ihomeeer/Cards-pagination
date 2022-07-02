@@ -2,3 +2,5 @@
 @import url(./components/List/List.css);
 @import url(./components/Card/Card.css);
 @import url(./components/Pagination/Pagination.css);
+@import url(./pages//NotFoundPage/NotFoundPage.css);
+@import url(./components/Loading/Loading.css);

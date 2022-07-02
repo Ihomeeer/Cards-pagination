@@ -1,6 +1,6 @@
-import { useState, useMemo } from "react";
+// компонент списка
 import { Card } from "../Card/Card";
-import api from "../../utils/api/api";
+// генерация уникального id для элементов списка
 import { v4 as generateUid } from 'uuid';
 
 

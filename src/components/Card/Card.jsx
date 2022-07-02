@@ -1,6 +1,8 @@
+// компонент карточки
 import { useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import api from "../../utils/api/api";
+
 
 export const Card = ({ data, isDetailsWindow, setCurrent }) => {
   const history = useHistory();
@@ -20,7 +22,7 @@ export const Card = ({ data, isDetailsWindow, setCurrent }) => {
   const openDetailsHandler = () => {
     const currentCard = data && data;
     currentCard && setCurrent(currentCard);
-    history.push(`/${data.id}`)
+    history.push(`/items/${data.id}`)
   }
 
   const backButtonHandler = () => {
@@ -40,11 +42,8 @@ export const Card = ({ data, isDetailsWindow, setCurrent }) => {
               :
               <button className="card-general__button card__button" onClick={openDetailsHandler}>Подробнее</button>
           }
-
         </div>
-
       }
     </>
-
   )
 }

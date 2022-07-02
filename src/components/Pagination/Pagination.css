@@ -3,8 +3,10 @@
   max-width: 90%;
   min-height: 40px;
   height: fit-content;
+  padding-top: 10px;
   display: flex;
   flex-direction: row;
+  border-top: 1px solid #858585;
 }
 
 .pagination__list {
@@ -37,14 +39,18 @@
   transition: all .3s;
   text-align: center;
 }
+.pagination__button_active {
+  background-color: rgba(1, 155, 122, 0.459);
+}
 
 .pagination__button:hover {
   background-color: rgba(221, 221, 221, 0.425);
 }
 
 .pagination__button_type_nav {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0;
   background-color: rgba(1, 155, 122, 0.171);
 }
 

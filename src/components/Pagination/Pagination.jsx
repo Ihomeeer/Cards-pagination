@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+// компонент с пагинацией
 import { v4 as generateUid } from 'uuid';
 
 export const Pagination = ({ itemsPerPage, totalItems, currentPage, setPage }) => {
@@ -36,7 +36,7 @@ export const Pagination = ({ itemsPerPage, totalItems, currentPage, setPage }) =
           pageButtons.map((number) => {
             return (
               <li className="pagination__item" key={generateUid()}>
-                <button className="pagination__button" onClick={() => changePageNumber(number)}>
+                <button className={`pagination__button ${number === currentPage ? 'pagination__button_active' : ''}`} onClick={() => changePageNumber(number)}>
                   {number}
                 </button>
               </li>
@@ -44,7 +44,6 @@ export const Pagination = ({ itemsPerPage, totalItems, currentPage, setPage }) =
           })
         }
       </ul>
-
       <button className="pagination__button pagination__button_type_nav" onClick={nextPageHandler}>NEXT</button>
     </div>
   )
